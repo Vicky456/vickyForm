@@ -1,0 +1,83 @@
+
+
+
+<div class="s1 m1 l1 col card pinned" style="padding-top: 6px;padding-bottom: 6px;width: 55px;POSITION: absolute;right: 137px;top: 165px">
+<i class="material-icons waves-effect tooltipped" data-position="right" data-tooltip="Add Question" style="cursor: pointer" (click)="Onchange(1)">sort</i>
+<i class="material-icons waves-effect tooltipped" data-position="right" data-tooltip="Add Question" style="cursor: pointer" (click)="Onchange(2)">notes</i>
+<i class="material-icons waves-effect tooltipped" data-position="right" data-tooltip="Add Question" style="cursor: pointer" (click)="Onchange(3)">text_fields</i>
+<i class="material-icons waves-effect tooltipped" data-position="right" data-tooltip="Add Question" style="cursor: pointer" (click)="Onchange(4)">radio_button_checked</i>
+<i class="material-icons waves-effect tooltipped" data-position="right" data-tooltip="Add Question" style="cursor: pointer" (click)="Onchange(5)">check_box</i>
+<i class="material-icons waves-effect tooltipped" data-position="right" data-tooltip="Add Question" style="cursor: pointer" (click)="Onchange(6)">arrow_drop_down_circle</i>
+<i class="material-icons waves-effect tooltipped" data-position="right" data-tooltip="Add Question" style="cursor: pointer" (click)="Onchange(7)">cloud_upload</i>
+<i class="material-icons waves-effect tooltipped" data-position="right" data-tooltip="Add Question" style="cursor: pointer" (click)="Onchange(8)">date_range</i>
+<i class="material-icons waves-effect tooltipped" data-position="right" data-tooltip="Add Question" style="cursor: pointer" (click)="Onchange(9)">access_time</i>
+<i class="material-icons waves-effect tooltipped" data-position="right" data-tooltip="Add photo" style="cursor: pointer">add_photo_alternate</i>
+<!--<i class="material-icons waves-effect tooltipped" data-position="right" data-tooltip="Change color" style="cursor: pointer">color_lens</i>-->
+<i class="material-icons waves-effect tooltipped" data-position="right" data-tooltip="Add video" style="cursor: pointer">videocam</i>
+<i class="material-icons waves-effect tooltipped" data-position="right" data-tooltip="Delete Question" style="cursor: pointer" (click)="Ondelete()">delete</i>
+</div>
+
+<div class="row">
+  <h5>
+    <span class="title">Title</span>
+
+  </h5>
+  <div class="col l7 m7 s7 input-field" style="margin-left: 40px;margin-top: 50px;margin-bottom: 0px">
+    <input type="text" id="title" placeholder="untitle Form">
+    <label for="title">Title</label>
+  </div>
+  <div class="col l10 m10 s10 input-field" style="margin-left: 40px">
+    <input type="text" id="desc">
+    <label for="desc">description</label>
+  </div>
+
+</div>
+
+
+<div class="row">
+  <h6 *ngIf="i!=0">
+    <span class="title">Questions</span>
+  </h6>
+  <ul class="collapsible " style="border: 0px">
+    <li *ngFor="let x of dataid" >
+      <div class="collapsible-header" *ngIf="x!=-9">
+        <div class="row" style="width: 100%;" [innerHtml]="dataList[x]">
+
+        </div>
+      </div>
+      <div class="collapsible-body">
+        <div class="row" style="width: 100%;">
+        <div class="col l12" style="margin-left: 40px">
+          <div class="col l7">
+
+          </div>
+          <div class="col l0" style="border-right: 1px solid #0000006e;">
+            <i class="material-icons waves-effect tooltipped" data-position="right" data-tooltip="Delete Question" style="cursor: pointer" (click)="Ondeleteid(x)">delete</i>
+          </div>
+
+
+          <div class="col l3">
+            <div class="switch" style="margin-top: 5px;">
+              <label>
+                Required
+                <input type="checkbox">
+                <span class="lever"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+
+
+
+</div>
+
+<div class="row">
+  <div class="col l12 m12 s12">
+    <button class="btn-small waves-effect waves-light right" style="margin-right: 5%;padding-right: 30px;background-color: rgb(255, 76, 224)"><i class="material-icons left" style="margin: 0px 7px;">cloud_download</i>Save</button>
+  </div>
+</div>
